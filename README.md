@@ -21,7 +21,4 @@ Welcome to my SQL repository! This collection of SQL scripts demonstrates a rang
 
 ### **Advanced Queries**
 - Window functions (ROW_NUMBER, RANK, NTILE, etc.)  
-- Common Table Expressions (CTEs)  
-- Recursive queries  
-- Query optimization and performance tuning  
-- Dynamic SQL  
+ 
