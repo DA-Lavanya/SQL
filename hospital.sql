@@ -1,4 +1,5 @@
 SELECT first_name,last_name,gender FROM patients where gender="M";
+---
 
 SELECT first_name,last_name FROM patients where allergies is null;
 
