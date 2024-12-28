@@ -56,5 +56,38 @@ Join products p On
 Group by order_year
 Order by order_year desc;
 
+Select ProductName, QuantityPerUnit from products;
+
+Select ProductID, ProductName from products;
+
+Select ProductID, ProductName from products where Discontinued=1;
+
+Select ProductName,UnitPrice, 
+CASE
+ WHEN UnitPrice=(Select Min(UnitPrice) from products)  THEN "Least Expensive"
+ WHEN UnitPrice=(Select Max(UnitPrice) from products)  THEN "Most Expensive"
+ END AS PriceCategory
+ from products
+ where UnitPrice=(Select Min(UnitPrice) from products) or UnitPrice=(Select Max(UnitPrice) from products);
+
+
+Select ProductId,ProductName,UnitPrice from Products where UnitPrice <20;
+
+Select ProductId,ProductName,UnitPrice from Products where UnitPrice IN(15,25);
+
+Select ProductId,UnitPrice from Products where UnitPrice>(Select AVG(UnitPrice) from Products);
+
+
+Select ProductId,ProductName,MAX(UnitPrice) AS UnitPrice  from Products 
+Group by UnitPrice 
+order by UnitPrice  desc limit 10;
+
+
+Select 
+( Select Count(*) from products where Discontinued=0) AS "Current",
+( Select Count(*) from products where Discontinued=1) AS "Discontinued" ;
+
+
+Select ProductName,UnitsOnOrder,UnitsInStock from products where UnitsInStock < UnitsOnOrder;
 
 
