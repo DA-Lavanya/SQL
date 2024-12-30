@@ -14,7 +14,7 @@ Welcome to my SQL repository! This collection of SQL scripts demonstrates a rang
 - GROUP BY and HAVING  
 
 ### **Intermediate Queries**
-- Joins (INNER, LEFT, RIGHT, FULL)  
+- Joins (INNER, LEFT, RIGHT, FULL,UNION)  
 - Subqueries and nested queries  
 - String functions and date/time operations  
 - Conditional logic with CASE statements  
