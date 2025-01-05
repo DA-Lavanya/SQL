@@ -17,7 +17,6 @@ order by first_name desc;
 -- calculated as 15% of salary)
 Select Concat(first_name," ",last_name) AS Name , Salary, Round((Salary*0.15),1) As PF from employees;
 
-
 -- 5. Write a query to get the employee ID, names (first_name, last_name), salary in ascending order of
 -- salary
 Select employee_id, Concat(first_name," ",last_name) AS Name,salary from employees 
@@ -145,9 +144,6 @@ WHERE job_id IN (
 
 Select SUBSTR(job_title, 1, INSTR(job_title, ' ') - 1) AS Title,job_title from jobs;
 
-
-
-
 -- 32. Write a query to display the length of first name for employees where last name contain character 'c'
 -- after 2nd position
 Select length(first_name) as First_name,last_name from employees where last_name like'__%c%';
@@ -172,7 +168,6 @@ Select first_name,lpad(salary,10,"$") As SALARY from employees;
 -- descending order of salary
 select substr(first_name,1,8),REPEAT('$', FLOOR(salary / 1000)) AS 'salary$' from employees
 order by salary desc;
-
 
 -- 36. Write a query to display the employees with their code, first name, last name and hire date who hired
 -- either on seventh day of any month or seventh month in any year
